@@ -1,0 +1,7 @@
+@use '../../styles/variables.scss' as *;
+
+.home {
+  background-color: $header-black;
+  height: 80px;
+  color: $white;
+}

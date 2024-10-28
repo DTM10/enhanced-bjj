@@ -1,0 +1,103 @@
+//  Fonts import
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//  Colours
+$black: #000;
+// $header-black: #1a1a1a;
+// $background-black: #1e1e1e;
+// $header-black: #000;
+// $background-black: #010301;
+$header-black: #080808;
+$background-black: #090909;
+$white: #fff;
+$red: #dd4150;
+
+//  Fonts
+$font: 'Poppins', sans-serif;
+
+// Font Sizes
+$font-size-small: 0.75rem; // 12px
+$font-size-base: 1rem; // 16px
+$font-size-large: 1.5rem; // 24px
+$font-size-h1: 2rem; // 32px
+$font-size-h2: 1.75rem; // 28px
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+// Spacing (in rem)
+$space-xs: 0.25rem; // 4px
+$space-sm: 0.5rem; // 8px
+$space-md: 1rem; // 16px
+$space-lg: 2rem; // 32px
+$space-xl: 4rem; // 64px
+$space-xxl: 6rem; // 96px
+// Border Radius
+$border-radius-sm: 0.25rem; // 4px
+$border-radius-md: 0.5rem; // 8px
+$border-radius-lg: 1rem; // 16px
+$border-radius-xl: 2rem; // 32px
+// Transitions
+$transition-fast: 0.2s;
+$transition-medium: 0.5s;
+$transition-slow: 1s;
+
+//  Spacing and Sizing
+$mobilePadding: 2.8125rem;
+$mobileRightHeaderPadding: 1.875rem;
+$mobilePadding: 1.5625rem;
+$mobileRightHeaderPadding: 1.5625rem;
+$tabletPadding: 4.375rem;
+$desktopPadding: 4.375rem;
+$headerMobileHeight: 80px;
+$headerHeight: 130px;
+$maxContentWidth: 1294px;
+$mobileFooterHeight: 920px;
+$desktopFooterHeight: 440px;
+
+//  Breakpoints
+$smallBreakpoint: 576px;
+$mediumBreakpoint: 768px;
+$largeBreakpoint: 992px;
+$xLargeBreakpoint: 1200px;
+
+// Borders
+// $hoverBorder: 1px dotted $greyBoderColor;
+
+//Mixins
+// When it becomes tablet size
+@mixin smallBreakpoint {
+  @media (min-width: $smallBreakpoint) {
+    padding-left: $tabletPadding;
+    padding-right: $tabletPadding;
+    @content;
+  }
+}
+
+@mixin mediumBreakpoint {
+  @media (min-width: $mediumBreakpoint) {
+    @content;
+  }
+}
+
+// When it becomes desktop size
+@mixin largeBreakpoint {
+  @media (min-width: $largeBreakpoint) {
+    padding-left: $desktopPadding;
+    padding-right: $desktopPadding;
+    @content;
+  }
+}
+
+// When it becomes xLarge size
+@mixin xLargeBreakpoint {
+  @media (min-width: $xLargeBreakpoint) {
+    padding-left: $desktopPadding;
+    padding-right: $desktopPadding;
+    @content;
+  }
+}
+
+// @include largeBreakpoint {content here}

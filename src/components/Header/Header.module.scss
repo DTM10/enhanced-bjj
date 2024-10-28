@@ -1,0 +1,127 @@
+@use '../../styles/variables.scss' as *;
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 $mobileRightHeaderPadding 0 $mobilePadding;
+  background-color: $header-black;
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  .navbarContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .mobileShow {
+      width: 100%;
+      height: $headerMobileHeight;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        width: 3rem;
+      }
+      .navbarToggler {
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: $white;
+        border-radius: $border-radius-md;
+        width: 3rem;
+        height: 3rem;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $space-sm;
+        .close {
+          display: inline-block;
+        }
+        .hamburger {
+          display: none;
+        }
+        &.collapsed {
+          .close {
+            font-size: $font-size-large;
+            display: none;
+          }
+          .hamburger {
+            font-size: $font-size-large;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .navLinksContainer {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      background-color: $header-black;
+      width: 100%;
+      box-shadow: 0px 1px 4px rgba(255, 255, 255, 0.1);
+      &.collapsed {
+        display: none;
+      }
+      padding-bottom: 20px;
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        .link {
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: $font-weight-semi-bold;
+          font-size: $font-size-small;
+          width: 100%;
+          text-align: center;
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+
+  @include smallBreakpoint {
+  }
+
+  @include largeBreakpoint {
+    .navbarContainer {
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      .mobileShow {
+        height: $headerHeight;
+        .navbarToggler {
+          display: none;
+        }
+      }
+      .navLinksContainer,
+      .navLinksContainer.collapsed {
+        display: flex;
+        position: static;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 0;
+        .links {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 50px;
+        }
+      }
+    }
+  }
+
+  @include xLargeBreakpoint {
+    .navbarContainer {
+      max-width: $maxContentWidth;
+    }
+  }
+}

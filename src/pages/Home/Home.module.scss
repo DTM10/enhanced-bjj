@@ -1,0 +1,7 @@
+@use '../../styles/variables.scss' as *;
+
+.home {
+  padding-left: $mobilePadding;
+  padding-right: $mobilePadding;
+  padding-top: $space-md;
+}
