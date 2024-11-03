@@ -2,10 +2,70 @@
 .App {
   width: 100% !important;
   background-color: $background-black;
+  h1 {
+    font-size: $font-size-h2;
+  }
+
+  h2 {
+    font-size: $font-size-base;
+  }
+
+  p,
+  a,
+  button,
+  input,
+  textarea,
+  span {
+    font-size: $font-size-small;
+  }
+  p {
+    line-height: 1.8;
+  }
+
+  @include largeBreakpoint {
+    h1 {
+      font-size: $font-size-h1;
+    }
+
+    h2 {
+      font-size: $font-size-h2;
+    }
+
+    p,
+    a,
+    button,
+    input,
+    textarea,
+    span {
+      font-size: $font-size-base;
+    }
+  }
+}
+#map {
+  border-radius: $border-radius-md;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font;
+  color: $white;
+}
+button.custom-zoom-button,
+button.custom-zoom-button {
+  border: none;
+  background-color: $white;
+  width: $space-lg;
+  height: $space-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: $font-size-large;
+  color: $black;
+  padding: $space-sm;
+  border: 0.5px solid $background-black;
+  border-radius: $border-radius-md;
+  transition: background-color 0.3s ease;
 }

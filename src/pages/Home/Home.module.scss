@@ -1,7 +1,26 @@
 @use '../../styles/variables.scss' as *;
 
 .home {
-  padding-left: $mobilePadding;
-  padding-right: $mobilePadding;
-  padding-top: $space-md;
+  // padding-left: $mobilePadding;
+  // padding-right: $mobilePadding;
+  // margin-top: $space-md;
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+    width: 100%;
+    .banner {
+      img {
+        width: 100%;
+      }
+    }
+    .banner-text {
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
+      h1 {
+      }
+      p {
+      }
+    }
+  }
 }

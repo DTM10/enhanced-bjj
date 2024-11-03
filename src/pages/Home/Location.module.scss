@@ -1,0 +1,13 @@
+@use '../../styles/variables.scss' as *;
+
+.location {
+  padding: 0 $mobile-padding;
+  .location-container {
+    a {
+      text-decoration: none;
+      &:hover {
+        border-bottom: 1px dashed $red;
+      }
+    }
+  }
+}

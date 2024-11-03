@@ -4,31 +4,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 $mobileRightHeaderPadding 0 $mobilePadding;
+  padding: 0 $mobile-padding;
   background-color: $header-black;
   position: relative;
   width: 100vw;
   max-width: 100%;
-  .navbarContainer {
+  .navbar-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    .mobileShow {
+    .mobile-show {
       width: 100%;
-      height: $headerMobileHeight;
+      height: $header-mobile-height;
       display: flex;
       justify-content: space-between;
       align-items: center;
       .logo {
-        width: 3rem;
+        width: 3.5rem;
       }
-      .navbarToggler {
+      .navbar-toggler {
         background-color: transparent;
         border: 1px solid rgba(255, 255, 255, 0.3);
         color: $white;
         border-radius: $border-radius-md;
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
@@ -51,9 +51,12 @@
             display: inline-block;
           }
         }
+        &:focus {
+          outline: 1px solid $red;
+        }
       }
     }
-    .navLinksContainer {
+    .nav-links-container {
       position: absolute;
       top: 100%;
       left: 0;
@@ -91,19 +94,19 @@
   }
 
   @include largeBreakpoint {
-    .navbarContainer {
+    .navbar-container {
       flex-direction: row;
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      .mobileShow {
-        height: $headerHeight;
-        .navbarToggler {
+      .mobile-show {
+        height: $header-desktop-height;
+        .navbar-toggler {
           display: none;
         }
       }
-      .navLinksContainer,
-      .navLinksContainer.collapsed {
+      .nav-links-container,
+      .nav-links-container.collapsed {
         display: flex;
         position: static;
         align-items: center;
@@ -120,8 +123,8 @@
   }
 
   @include xLargeBreakpoint {
-    .navbarContainer {
-      max-width: $maxContentWidth;
+    .navbar-container {
+      max-width: $max-content-width;
     }
   }
 }

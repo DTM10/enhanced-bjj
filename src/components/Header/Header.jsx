@@ -34,39 +34,35 @@ export default function Header() {
     setIsCollapsed((prevValue) => !prevValue);
   };
   return (
-    <header className={styles.header}>
-      <nav className={styles.navbarContainer}>
-        <div className={styles.mobileShow}>
+    <header className={styles['header']}>
+      <nav className={styles['navbar-container']}>
+        <div className={styles['mobile-show']}>
           <img
-            className={styles.logo}
+            className={styles['logo']}
             src={BrandLogo}
             alt="Enhanced BJJ Logo"
           />
           <button
             ref={togglerRef}
             onClick={handleChangeCollapsed}
-            className={`${styles.navbarToggler} ${
-              isCollapsed && styles.collapsed
+            className={`${styles['navbar-toggler']} ${
+              isCollapsed && styles['collapsed']
             }`}
           >
-            <FaBars className={styles.hamburger} />
-            <FaTimesCircle className={styles.close} />
+            <FaBars className={styles['hamburger']} />
+            <FaTimesCircle className={styles['close']} />
           </button>
         </div>
         <div
-          className={`${styles.navLinksContainer} ${
-            isCollapsed && styles.collapsed
+          className={`${styles['nav-links-container']} ${
+            isCollapsed && styles['collapsed']
           }`}
           ref={modalRef}
         >
-          <div className={styles.links}>
-            <Link className={styles.link}>Home</Link>
-            <Link className={styles.link}>Meet Our Team</Link>
-            <Link className={styles.link}>Contact Us</Link>
-            {/* <NavItem linkTo="" label="Home" />
-            <NavItem linkTo="events" label="Events" />
-            <NavItem linkTo="schedule-demo" label="Pricing" />
-            <NavItem linkTo="about" label="About Us" /> */}
+          <div className={styles['links']}>
+            <Link className={styles['link']}>Home</Link>
+            <Link className={styles['link']}>Meet Our Team</Link>
+            <Link className={styles['link']}>Contact Us</Link>
           </div>
         </div>
       </nav>

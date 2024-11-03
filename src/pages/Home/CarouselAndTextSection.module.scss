@@ -1,0 +1,12 @@
+@use '../../styles/variables.scss' as *;
+
+.carousel-and-text {
+  .carousel-and-text-container {
+    padding: 0 $mobile-padding;
+    h1 {
+      text-align: center;
+    }
+    p {
+    }
+  }
+}
