@@ -3,15 +3,17 @@
 .schedule-section {
   margin-top: $space-lg;
   .schedule-section-container {
-    padding: 0 $mobile-padding;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
     height: 100%;
-    p {
+    .expeption {
+      text-align: center;
+      font-size: 10px;
       span {
+        font-size: 10px;
         color: $red;
       }
     }

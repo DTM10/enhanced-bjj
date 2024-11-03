@@ -1,9 +1,9 @@
 @use '../../styles/variables.scss' as *;
 
 .home {
-  // padding-left: $mobilePadding;
-  // padding-right: $mobilePadding;
-  // margin-top: $space-md;
+  overflow: hidden;
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
   .home-container {
     display: flex;
     flex-direction: column;
@@ -11,13 +11,24 @@
     width: 100%;
     .banner {
       img {
-        width: 100%;
+        translate: -$mobile-padding;
+        width: calc(100% + 2 * #{$mobile-padding});
       }
     }
     .banner-text {
-      padding-left: $mobile-padding;
-      padding-right: $mobile-padding;
       p {
+      }
+    }
+  }
+
+  @include smallBreakpoint {
+    // padding: 0 $tablet-padding;
+    .home-container {
+      .banner {
+        img {
+          translate: -$tablet-padding;
+          width: calc(100% + 2 * #{$tablet-padding});
+        }
       }
     }
   }

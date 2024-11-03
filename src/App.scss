@@ -26,7 +26,7 @@
     line-height: 1.8;
   }
 
-  @include largeBreakpoint {
+  @include mediumBreakpoint {
     h1 {
       font-size: $font-size-h1;
     }
@@ -45,6 +45,7 @@
     }
   }
 }
+
 #map {
   border-radius: $border-radius-md;
 }

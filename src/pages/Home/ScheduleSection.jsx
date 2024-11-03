@@ -33,7 +33,7 @@ export default function ScheduleSection() {
     <section className={styles['schedule-section']}>
       <div className={styles['schedule-section-container']}>
         <h2>Enhanced BJJ Schedule</h2>
-        <p>
+        <p className={styles['expeption']}>
           <span>*</span> Subject to change based on holidays, for more info,
           please check the App
         </p>
