@@ -1,0 +1,38 @@
+@use '../../styles/variables.scss' as *;
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 45deg;
+  inherits: false;
+}
+.outlined-button {
+  position: relative;
+  //   border: 2px solid $white;
+  border: none;
+  border-radius: $border-radius-md;
+  padding: $space-xs;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(from var(--angle), $white, $red, $white);
+  overflow-y: hidden;
+  max-width: 250px;
+  cursor: pointer;
+  &:hover {
+    animation: 1s rotateGradient linear infinite;
+    cursor: pointer;
+  }
+  &:active {
+    background: $red;
+  }
+}
+
+@keyframes rotateGradient {
+  from {
+    --angle: 45deg;
+  }
+  to {
+    --angle: 405deg;
+  }
+}

@@ -2,6 +2,17 @@
 
 .kids-session {
   padding: 0 $mobile-padding;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   .kids-session-container {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    p {
+      margin-top: $space-sm;
+    }
   }
 }

@@ -4,10 +4,14 @@
   background-color: $background-black;
   h1 {
     font-size: $font-size-h2;
+    margin-bottom: $space-sm;
+    text-align: center;
   }
 
   h2 {
     font-size: $font-size-base;
+    margin-bottom: $space-sm;
+    text-align: center;
   }
 
   p,

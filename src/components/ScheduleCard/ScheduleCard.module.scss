@@ -10,6 +10,7 @@
   .schedule-card-container {
     width: 100%;
     max-width: 380px;
+    min-height: 160px;
     border: 2px solid $white;
     // border-image: linear-gradient(to right, $red, $white) 1;
     border-radius: $border-radius-md;

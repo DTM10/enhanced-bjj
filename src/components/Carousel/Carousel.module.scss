@@ -8,23 +8,32 @@
   justify-content: space-between;
   padding-top: 5px;
   gap: 15px;
-
   .carousel-container {
-    position: relative;
+    display: flex;
     min-height: 210px;
     width: 100%;
     height: auto;
-    overflow: hidden;
     img {
-      position: absolute;
       width: 100%;
       height: auto;
-      // height: 300px;
+      display: none;
       opacity: 0;
-      transition: opacity $transition-medium ease;
+      animation: showUp 0.5s ease-in-out forwards;
       &.active {
         opacity: 1;
+        display: block;
       }
     }
+  }
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+    // transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    // transform: translateY(0);
   }
 }

@@ -1,7 +1,21 @@
 @use '../../styles/variables.scss' as *;
 
-.home {
+.footer {
   background-color: $header-black;
-  height: 80px;
+  height: $mobile-footer-height;
   color: $white;
+  margin-top: $space-lg;
+  border-top: 0.5px solid $white;
+  border-image: linear-gradient(to right, $red, $background-black) 1 0 0 0;
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: $space-sm;
+    p {
+      font-size: 10px;
+    }
+  }
 }

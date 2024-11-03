@@ -22,6 +22,7 @@ export default function Home() {
           </div>
         </section>
         <CarouselAndTextSection />
+
         <KidsSession />
         <ScheduleSection />
         <Location />

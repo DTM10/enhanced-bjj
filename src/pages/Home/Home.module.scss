@@ -7,7 +7,7 @@
   .home-container {
     display: flex;
     flex-direction: column;
-    gap: $space-xl;
+    gap: $space-lg;
     width: 100%;
     .banner {
       img {
@@ -17,8 +17,6 @@
     .banner-text {
       padding-left: $mobile-padding;
       padding-right: $mobile-padding;
-      h1 {
-      }
       p {
       }
     }
