@@ -110,6 +110,9 @@
       justify-content: space-between;
       .mobile-show {
         height: $header-desktop-height;
+        .logo {
+          width: 4.5rem;
+        }
         .navbar-toggler {
           display: none;
         }
@@ -121,8 +124,10 @@
         align-items: center;
         justify-content: center;
         padding-bottom: 0;
+        box-shadow: none;
         .links {
           display: flex;
+          flex-direction: row;
           align-items: center;
           justify-content: center;
           gap: 50px;
