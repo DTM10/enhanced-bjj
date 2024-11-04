@@ -2,11 +2,27 @@
 
 .carousel-and-text {
   .carousel-and-text-container {
-    h1 {
-      text-align: center;
-    }
-    p {
-      margin-top: $space-sm;
+    .content-container {
+      p {
+        margin-top: $space-sm;
+      }
     }
   }
+  @include largeBreakpoint {
+    padding: 0;
+    .carousel-and-text-container {
+      .content-container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: $space-lg;
+        p {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+      }
+    }
+  }
+  // @include xLargeBreakpoint {
+
+  // }
 }

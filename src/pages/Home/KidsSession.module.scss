@@ -7,11 +7,34 @@
   width: 100%;
   .kids-session-container {
     width: 100%;
-    img {
-      width: 100%;
+    .content-container {
+      img {
+        width: 100%;
+      }
+      p {
+        margin-top: $space-sm;
+      }
     }
-    p {
-      margin-top: $space-sm;
+  }
+  @include largeBreakpoint {
+    padding: 0;
+    .kids-session-container {
+      h2 {
+        text-align: right;
+      }
+      .content-container {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: $space-lg;
+        p {
+          margin-top: auto;
+          margin-bottom: auto;
+          order: 1;
+        }
+        img {
+          order: 2;
+        }
+      }
     }
   }
 }

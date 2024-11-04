@@ -19,6 +19,11 @@ $gradient-red-black-45: linear-gradient(
   rgba(221, 65, 80, 0.45),
   rgba(9, 9, 9, 0.45)
 );
+$gradient-red-white-15: linear-gradient(
+  to right,
+  rgba(221, 65, 80, 0.15),
+  rgba(255, 255, 255, 0.15)
+);
 
 //  Fonts
 $font: 'Poppins', sans-serif;
@@ -59,7 +64,7 @@ $tablet-padding: 3.125rem;
 $desktop-padding: 4.375rem;
 $header-mobile-height: 80px;
 $header-desktop-height: 100px;
-$max-content-width: 1294px;
+$max-content-width: 1200px;
 $mobile-footer-height: 80px;
 $desktop-footer-height: 440px;
 
@@ -67,7 +72,7 @@ $desktop-footer-height: 440px;
 $small-breakpoint: 576px;
 $medium-breakpoint: 768px;
 $large-breakpoint: 992px;
-$x-large-breakpoint: 1200px;
+$x-large-breakpoint: 1350px;
 
 // Borders
 // $hoverBorder: 1px dotted $greyBoderColor;

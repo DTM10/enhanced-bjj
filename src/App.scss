@@ -4,13 +4,13 @@
   background-color: $background-black;
   h1 {
     font-size: $font-size-h2;
-    margin-bottom: $space-sm;
+    padding-bottom: $space-sm;
     text-align: center;
   }
 
   h2 {
     font-size: $font-size-base;
-    margin-bottom: $space-sm;
+    padding-bottom: $space-sm;
     text-align: center;
   }
 
@@ -33,6 +33,32 @@
 
     h2 {
       font-size: $font-size-h2;
+    }
+
+    p,
+    a,
+    button,
+    input,
+    textarea,
+    span {
+      font-size: $font-size-base;
+    }
+  }
+
+  @include largeBreakpoint {
+    padding: 0;
+    h1 {
+      font-size: $font-size-h1;
+      padding-top: $space-lg;
+      padding-bottom: $space-md;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: $font-size-h2;
+      padding-top: $space-md;
+      padding-bottom: $space-md;
+      text-align: left;
     }
 
     p,

@@ -34,4 +34,8 @@
       }
     }
   }
+  @include largeBreakpoint {
+    padding: 0;
+    align-items: flex-start;
+  }
 }

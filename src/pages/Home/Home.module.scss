@@ -4,6 +4,11 @@
   overflow: hidden;
   padding-left: $mobile-padding;
   padding-right: $mobile-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   .home-container {
     display: flex;
     flex-direction: column;
@@ -11,25 +16,23 @@
     width: 100%;
     .banner {
       img {
-        translate: -$mobile-padding;
-        width: calc(100% + 2 * #{$mobile-padding});
-      }
-    }
-    .banner-text {
-      p {
+        width: 100%;
       }
     }
   }
 
   @include smallBreakpoint {
-    // padding: 0 $tablet-padding;
     .home-container {
-      .banner {
-        img {
-          translate: -$tablet-padding;
-          width: calc(100% + 2 * #{$tablet-padding});
-        }
-      }
+    }
+  }
+  @include largeBreakpoint {
+    .home-container {
+    }
+  }
+
+  @include xLargeBreakpoint {
+    .home-container {
+      max-width: $max-content-width;
     }
   }
 }

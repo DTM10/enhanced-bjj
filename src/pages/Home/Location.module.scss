@@ -2,10 +2,35 @@
 
 .location {
   .location-container {
-    a {
-      text-decoration: none;
-      &:hover {
-        border-bottom: 1px dashed $red;
+    .content {
+      .address {
+        a {
+          text-decoration: none;
+          &:hover {
+            border-bottom: 1px dashed $red;
+          }
+        }
+        .expeption {
+          font-size: $font-size-small;
+          span {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+  @include largeBreakpoint {
+    padding: 0;
+    .location-container {
+      .content {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: $space-lg;
+        .address {
+          order: 2;
+          margin-top: auto;
+          margin-bottom: auto;
+        }
       }
     }
   }
