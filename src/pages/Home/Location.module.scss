@@ -2,6 +2,8 @@
 
 .location {
   .location-container {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
     .content {
       .address {
         a {
@@ -22,6 +24,15 @@
   @include largeBreakpoint {
     padding: 0;
     .location-container {
+      padding-left: $tablet-padding;
+      padding-right: $tablet-padding;
+    }
+  }
+  @include largeBreakpoint {
+    padding: 0;
+    .location-container {
+      padding-left: $desktop-padding;
+      padding-right: $desktop-padding;
       .content {
         display: grid;
         grid-template-columns: 3fr 2fr;

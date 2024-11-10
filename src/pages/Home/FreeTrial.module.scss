@@ -1,0 +1,126 @@
+@use '../../styles/variables.scss' as *;
+
+.free-trial {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .free-trial-container {
+    width: 100%;
+    padding: 0 $mobile-padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .text-container {
+      //   margin: $space-xl 0 0;
+      .not-member {
+        width: 100%;
+        font-size: $font-size-small;
+        color: $red;
+        text-align: center;
+      }
+      .free-trial-text {
+        text-align: center;
+        margin-top: $space-lg;
+        width: 100%;
+        font-size: $font-size-base;
+        display: flex;
+        flex-direction: column;
+        strong {
+          color: $red;
+          font-size: $font-size-large;
+          // border-bottom: 1px dashed $red;
+        }
+      }
+    }
+    .app-btns-container {
+      width: 100%;
+      margin-top: $space-lg;
+      //   margin-bottom: $space-xl;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: $space-md;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @include smallBreakpoint {
+    padding: 0;
+    .free-trial-container {
+      padding: 0 $tablet-padding;
+    }
+  }
+  @include largeBreakpoint {
+    padding: 0;
+    .free-trial-container {
+      padding: 0 $desktop-padding;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $space-lg;
+      .text-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: $space-xl 0;
+        .free-trial-text,
+        .not-member {
+          width: 100%;
+          text-align: left;
+          padding-top: $space-md;
+          margin: 0;
+        }
+        .free-trial-text {
+          display: block;
+          strong {
+            border-bottom: 1px dashed $red;
+          }
+        }
+      }
+      .app-btns-container {
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Buttons Styles
+.app-btn-content {
+  display: flex;
+  font-size: $font-size-h2;
+  align-items: center;
+  justify-content: center;
+  gap: $space-md;
+  background-color: $background-black;
+  border-radius: $border-radius-md;
+  padding: $space-xs;
+  width: 300px;
+  .app-btn-text {
+    display: flex;
+    flex-direction: column;
+    span {
+      width: 100%;
+
+      font-size: 0.625rem;
+      font-weight: $font-weight-light;
+      line-height: 1;
+      text-align: left;
+    }
+    .btn-type {
+      width: 100%;
+      margin: 0;
+      font-size: $font-size-base;
+      font-weight: $font-weight-normal;
+      line-height: 1;
+      text-align: left;
+      padding-top: 0;
+    }
+  }
+}

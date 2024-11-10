@@ -1,0 +1,67 @@
+@use '../../styles/variables.scss' as *;
+
+.img-text-session {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  &.matte {
+    background-color: $matte-black;
+  }
+  .img-text-session-container {
+    width: 100%;
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+    .content-container {
+      img {
+        width: 100%;
+      }
+      p {
+        margin-top: $space-sm;
+      }
+    }
+  }
+  @include smallBreakpoint {
+    padding: 0;
+    .img-text-session-container {
+      padding-left: $tablet-padding;
+      padding-right: $tablet-padding;
+    }
+  }
+  @include largeBreakpoint {
+    padding: 0;
+
+    .img-text-session-container {
+      padding-left: $desktop-padding;
+      padding-right: $desktop-padding;
+      h2 {
+        text-align: left;
+      }
+      .content-container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: $space-lg;
+        img {
+        }
+        p {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+      }
+      &.img-right {
+        h2 {
+          text-align: right;
+        }
+        .content-container {
+          grid-template-columns: 2fr 3fr;
+          img {
+            order: 2;
+          }
+          p {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}

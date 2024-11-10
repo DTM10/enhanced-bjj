@@ -1,0 +1,44 @@
+@use '../../styles/variables.scss' as *;
+
+.divider-left {
+  height: 0.5px;
+  background: $gradient-red-black-45;
+}
+.divider-right {
+  height: 0.5px;
+  background: $gradient-black-red-45;
+}
+
+// @keyframes gradientGlow {
+//   0% {
+//     background: linear-gradient(
+//       to left,
+//       rgba(221, 65, 80, 0.45),
+//       rgba(9, 9, 9, 0.45)
+//     );
+//   }
+//   50% {
+//     background: linear-gradient(
+//       to left,
+//       rgba(9, 9, 9, 0.45),
+//       rgba(221, 65, 80, 0.45),
+//       rgba(9, 9, 9, 0.45)
+//     );
+//   }
+//   100% {
+//     background: linear-gradient(
+//       to left,
+//       rgba(221, 65, 80, 0.45),
+//       rgba(9, 9, 9, 0.45)
+//     );
+//   }
+// }
+
+// @keyframes gradientWalk {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+//   100% {
+//     background-position: 100% 50%;
+//   }
+// }

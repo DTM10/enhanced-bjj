@@ -1,9 +1,24 @@
 import styles from './Home.module.scss';
-import teamBanner from '../../assets/images/team-banner.webp';
-import CarouselAndTextSection from './CarouselAndTextSection';
-import KidsSession from './KidsSession';
+import teamBanner from '../../assets/images/banner.webp';
+import CarouselAndTextSection from '../../components/CarouselAndTextSection/CarouselAndTextSection';
 import ScheduleSection from './ScheduleSection';
 import Location from './Location';
+import ImageTextSection from '../../components/ImageTextSection/ImageTextSection';
+import womenImg from '../../assets/images/women1.webp';
+import carouselImg1 from '../../assets/images/carousel1.webp';
+import carouselImg2 from '../../assets/images/carousel2.webp';
+import carouselImg3 from '../../assets/images/carousel3.webp';
+import carouselImg4 from '../../assets/images/carousel4.webp';
+import carouselImg5 from '../../assets/images/carousel5.webp';
+import kidsImg1 from '../../assets/images/kids1.webp';
+// import kidsImg2 from '../../assets/images/kids2.webp';
+// import kidsImg3 from '../../assets/images/kids3.webp';
+// import kidsImg4 from '../../assets/images/kids4.webp';
+// import kidsImg5 from '../../assets/images/kids5.webp';
+import kidsImg6 from '../../assets/images/kids6.webp';
+import kidsImg7 from '../../assets/images/kids7.webp';
+import FreeTrial from './FreeTrial';
+import Divider from '../../components/Divider/Divider';
 
 export default function Home() {
   return (
@@ -12,7 +27,7 @@ export default function Home() {
         <section className={styles['banner']}>
           <img src={teamBanner} alt="grading event" />
           <div className={styles['banner-text']}>
-            <h1>Brazilian Jiu-Jitsu changes lives</h1>
+            <h1>Brazilian Jiu-Jitsu CHANGES LIVES</h1>
             <p>
               At Enhanced BJJ, we create a fantastic learning environment where
               you’ll not only learn Jiu-Jitsu but also become part of an awesome
@@ -21,9 +36,46 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <CarouselAndTextSection />
-        <KidsSession />
+        <Divider />
+        <CarouselAndTextSection
+          title="Enhance your BJJ skills in Gi & No Gi Classes"
+          images={[
+            carouselImg1,
+
+            carouselImg2,
+            carouselImg3,
+            carouselImg4,
+            carouselImg5,
+          ]}
+          text=" Our Adults Gi and No Gi Classes are designed for every skill level, from beginners to advanced practitioners. Whether you’re looking to compete or just stay in shape, our experienced instructors will guide you every step of the way."
+          carrouselPosition="right"
+        />
+        <Divider side="right" />
+
+        <ImageTextSection
+          img={womenImg}
+          imgAlt="Women's class"
+          title="Empowering Women on the Mats"
+          text="Discover the perfect space to train, connect, and grow in our Women’s Only Class. Designed exclusively for women of all skill levels, this class offers a supportive and inclusive environment to learn Brazilian Jiu-Jitsu techniques while building confidence, strength, and camaraderie."
+          // imgPosition="right"
+        />
+        <Divider />
+
+        <CarouselAndTextSection
+          title="Building Confidence and Discipline in Our Kids"
+          // images={[kidsImg2, kidsImg3, kidsImg4, kidsImg5]}
+          images={[kidsImg1, kidsImg6, kidsImg7]}
+          text="Our Kids Program is focused on empowering young champions. Through carefully designed classes, kids learn discipline, respect, and self-confidence while having fun. Our experienced instructors ensure a safe and supportive environment for all participants."
+          carrouselPosition="right"
+        />
+        <Divider side="right" />
+
         <ScheduleSection />
+        <Divider />
+
+        <FreeTrial />
+        <Divider side="right" />
+        <div className={styles['divider-right']}></div>
         <Location />
       </div>
     </div>

@@ -1,0 +1,53 @@
+@use '../../styles/variables.scss' as *;
+
+.carousel-and-text {
+  .carousel-and-text-container {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+    .content-container {
+      p {
+        margin-top: $space-sm;
+      }
+    }
+  }
+  @include smallBreakpoint {
+    padding: 0;
+    .carousel-and-text-container {
+      padding-left: $tablet-padding;
+      padding-right: $tablet-padding;
+    }
+  }
+  @include largeBreakpoint {
+    padding: 0;
+    .carousel-and-text-container {
+      padding-left: $desktop-padding;
+      padding-right: $desktop-padding;
+      .content-container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: $space-lg;
+        p {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+      }
+      &.carousel-and-text-container-right {
+        h2 {
+          text-align: right;
+        }
+        .content-container {
+          grid-template-columns: 2fr 3fr;
+          .carousel-space {
+            order: 1;
+          }
+          p {
+            order: 0;
+          }
+        }
+      }
+    }
+  }
+  &.matte {
+    background-color: $matte-black;
+  }
+}

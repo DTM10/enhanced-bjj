@@ -2,15 +2,20 @@
 .App {
   width: 100% !important;
   background-color: $background-black;
+  font-family: $font;
   h1 {
     font-size: $font-size-h2;
     padding-bottom: $space-sm;
     text-align: center;
+    font-family: $font-oswald;
+    font-weight: $font-weight-semi-bold;
   }
 
   h2 {
     font-size: $font-size-base;
     padding-bottom: $space-sm;
+    font-family: $font-oswald;
+    font-weight: $font-weight-semi-bold;
     text-align: center;
   }
 
