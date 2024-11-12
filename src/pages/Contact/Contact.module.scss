@@ -1,0 +1,170 @@
+@use '../../styles/variables.scss' as *;
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 45deg;
+  inherits: false;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $mobile-padding;
+  .contact-container {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $space-md;
+    .contact-form {
+      width: 100%;
+      max-width: 600px;
+      gap: $space-md;
+      display: inline-flex;
+      flex-direction: column;
+      h2 {
+        margin-top: $space-lg;
+      }
+      .user-info {
+        display: inline-flex;
+        flex-direction: column;
+        gap: $space-md;
+        width: 100%;
+        label {
+          display: inline-flex;
+          flex-direction: column;
+          font-weight: $font-weight-light;
+          input {
+            background-color: $matte-black;
+            border-radius: $border-radius-md;
+            border: 0.5px solid $red;
+            color: $white;
+            margin: $space-sm 0;
+            padding: $space-sm;
+          }
+        }
+      }
+      .text-area {
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+        font-weight: $font-weight-light;
+        margin-bottom: $space-lg;
+        textarea {
+          resize: none;
+          height: 200px;
+          background-color: $matte-black;
+          border-radius: $border-radius-md;
+          border: 0.5px solid $red;
+          color: $white;
+          margin: $space-sm 0;
+          padding: $space-sm;
+        }
+      }
+      .button-container {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  @include smallBreakpoint {
+  }
+  @include largeBreakpoint {
+    .contact-container {
+      align-items: flex-start;
+      justify-content: flex-start;
+      .contact-form {
+        width: 100%;
+        justify-content: flex-start;
+        .button-container {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+  @include xLargeBreakpoint {
+    .contact-container {
+      max-width: $max-content-width;
+    }
+  }
+}
+
+// Button Content
+
+.button-content {
+  width: 100%;
+  padding: $space-md $space-xl;
+  background-color: $matte-black;
+  border-radius: $border-radius-md;
+  font-weight: $font-weight-semi-bold;
+  cursor: pointer;
+  @include largeBreakpoint {
+    padding: $space-md $space-xl;
+    font-size: $font-size-large;
+  }
+}
+
+// Modal Content
+.modal-content {
+  width: 310px;
+  height: 220px;
+  padding: 2px;
+  background: conic-gradient(from var(--angle), $white, $red, $white);
+  animation: 1s rotateGradient linear infinite;
+  overflow-y: hidden;
+  border-radius: $border-radius-md;
+
+  .modal-content-container {
+    background: $background-gradient;
+    border-radius: $border-radius-md;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $space-md;
+    padding: $space-lg;
+    z-index: 102;
+    .modal-logo {
+      width: 60px;
+      height: auto;
+    }
+    .modal-title {
+      font-size: $font-size-base;
+    }
+    .modal-text {
+      font-size: $font-size-small;
+    }
+  }
+  @include largeBreakpoint {
+    width: 600px;
+    height: 300px;
+    .modal-content-container {
+      .modal-logo {
+        width: 100px;
+        height: auto;
+      }
+      .modal-title {
+        font-size: $font-size-large;
+      }
+      .modal-text {
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
+
+@keyframes rotateGradient {
+  from {
+    --angle: 45deg;
+  }
+  to {
+    --angle: 405deg;
+  }
+}

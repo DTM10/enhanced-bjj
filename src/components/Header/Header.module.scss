@@ -5,8 +5,8 @@
   justify-content: center;
   align-items: center;
   padding: 0 $mobile-padding;
-  background-color: $header-black;
-
+  // background-color: $header-black;
+  background: $header-gradient;
   position: relative;
   width: 100vw;
   max-width: 100%;
@@ -15,7 +15,7 @@
   // border-image: linear-gradient(to right, $red, $background-black) 0 0 1 0;
   border-image: $gradient-red-white-15 0 0 1 0;
   &:hover {
-    background-color: $matte-black-90;
+    background: $matte-black-90;
   }
   .navbar-container {
     display: flex;

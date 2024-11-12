@@ -37,11 +37,13 @@ export default function Header() {
     <header className={styles['header']}>
       <nav className={styles['navbar-container']}>
         <div className={styles['mobile-show']}>
-          <img
-            className={styles['logo']}
-            src={BrandLogo}
-            alt="Enhanced BJJ Logo"
-          />
+          <Link to={'/'}>
+            <img
+              className={styles['logo']}
+              src={BrandLogo}
+              alt="Enhanced BJJ Logo"
+            />
+          </Link>
           <button
             ref={togglerRef}
             onClick={handleChangeCollapsed}
@@ -60,9 +62,15 @@ export default function Header() {
           ref={modalRef}
         >
           <div className={styles['links']}>
-            <Link className={styles['link']}>Home</Link>
-            <Link className={styles['link']}>Meet Our Team</Link>
-            <Link className={styles['link']}>Contact Us</Link>
+            <Link className={styles['link']} to="/">
+              Home
+            </Link>
+            {/* <Link className={styles['link']} to="/team">
+              Meet Our Team
+            </Link> */}
+            <Link className={styles['link']} to="/contact-us">
+              Contact Us
+            </Link>
           </div>
         </div>
       </nav>

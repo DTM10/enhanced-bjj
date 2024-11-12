@@ -10,7 +10,9 @@ export default function Location() {
           {/* TODO: Add link when do the Google Business profile */}
           <div className={styles['address']}>
             <a href="https://maps.app.goo.gl/x87H2bLNakcW4cJm7" target="_blank">
-              303 Richmond Street, London, Ontario, N6B 2H8
+              <span>303 Richmond Street</span>
+              <span>London, Ontario</span>
+              <span>N6B 2H8</span>
             </a>
             <p className={styles['expeption']}>
               <span>*</span> Use the Bathurst Street Entrance

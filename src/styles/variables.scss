@@ -7,29 +7,42 @@ $header-black: #080808;
 $background-black: #090909;
 $matte-black: #101220;
 $matte-black-90: rgba(16, 18, 32, 0.9);
+$matte-black-30: rgba(16, 18, 32, 0.8);
+$white-10: rgba(255, 255, 255, 0.2);
 // $light-grey: 88ee8e;
 // $medium-grey: 88ee8e;
 // $extra-dark-grey: 181818;
 
 $white: #fff;
 $red: #dd4150;
+$red-50: rgba(221, 65, 80, 0.5);
 
 // Gradients
 $gradient-red-white: linear-gradient(to right, $red, $white);
 $gradient-red-black-45: linear-gradient(
   to right,
-  rgba(221, 65, 80, 0.45),
-  rgba(9, 9, 9, 0.45)
+  rgba(221, 65, 80, 0.3),
+  rgba(9, 9, 9, 0.55)
 );
 $gradient-black-red-45: linear-gradient(
   to left,
-  rgba(221, 65, 80, 0.45),
-  rgba(9, 9, 9, 0.45)
+  rgba(221, 65, 80, 0.3),
+  rgba(9, 9, 9, 0.55)
 );
 $gradient-red-white-15: linear-gradient(
   to right,
   rgba(221, 65, 80, 0.15),
   rgba(255, 255, 255, 0.15)
+);
+$background-gradient: linear-gradient(
+  to bottom right,
+  $background-black,
+  $matte-black
+);
+$header-gradient: linear-gradient(
+  to bottom left,
+  $background-black,
+  $matte-black
 );
 
 //  Fonts

@@ -1,7 +1,9 @@
 @use '../src/styles/variables.scss' as *;
 .App {
   width: 100% !important;
-  background-color: $background-black;
+  // background-color: $background-black;
+  background: $background-gradient;
+  // linear-gradient(to right, $background-black, $red);
   font-family: $font;
   h1 {
     font-size: $font-size-h2;

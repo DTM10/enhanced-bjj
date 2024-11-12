@@ -6,10 +6,21 @@
     padding-right: $mobile-padding;
     .content {
       .address {
+        width: auto;
         a {
           text-decoration: none;
+          // display: inline-flex;
+          display: flex;
+          flex-direction: column;
+
+          span {
+            display: flex;
+          }
           &:hover {
-            border-bottom: 1px dashed $red;
+            span {
+              // border-bottom: 1px dashed $red;
+              text-decoration: underline $red-50;
+            }
           }
         }
         .expeption {

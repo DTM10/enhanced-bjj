@@ -1,0 +1,22 @@
+@use '../../styles/variables.scss' as *;
+
+.team {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $mobile-padding;
+  .team-container {
+    width: 100%;
+  }
+  @include smallBreakpoint {
+  }
+  @include largeBreakpoint {
+  }
+  @include xLargeBreakpoint {
+    .team-container {
+      max-width: $max-content-width;
+    }
+  }
+}

@@ -3,12 +3,18 @@ import './App.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
 import Home from './pages/Home/Home.jsx';
+import Team from './pages/Team/Team.jsx';
+import Contact from './pages/Contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
-    children: [{ index: true, element: <Home /> }],
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'team', element: <Team /> },
+      { path: 'contact-us', element: <Contact /> },
+    ],
   },
 ]);
 
