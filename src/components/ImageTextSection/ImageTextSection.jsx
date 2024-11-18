@@ -5,13 +5,15 @@ export default function ImageTextSection({
   img,
   imgAlt,
   title,
-  text,
+  text, // Optional - will be displayed below the image
+  writtenContent, // Optional - if you want to display JSX instead of text
   imgPosition, // Pass "right" to make the image go to the right on large screens
-  isMatte = false,
+  variant,
 }) {
-  const componentClass = isMatte
-    ? `${styles['img-text-session']} ${styles['matte']}`
+  const componentClass = variant
+    ? `${styles['img-text-session']} ${styles[variant]}`
     : styles['img-text-session'];
+
   const containerClass =
     imgPosition && imgPosition === 'right'
       ? `${styles['img-text-session-container']} ${styles['img-right']}`
@@ -19,10 +21,17 @@ export default function ImageTextSection({
   return (
     <section className={componentClass}>
       <div className={containerClass}>
-        <h2>{title}</h2>
+        <h2 className={styles['section-title']}>{title}</h2>
         <div className={styles['content-container']}>
-          <img src={img} alt={imgAlt} />
-          <p>{text}</p>
+          <div className={styles['img-container']}>
+            <img src={img} alt={imgAlt} />
+          </div>
+          {text && (
+            <div className={styles['text-container']}>
+              <p>{text}</p>
+            </div>
+          )}
+          {writtenContent && <>{writtenContent}</>}
         </div>
       </div>
     </section>
@@ -33,7 +42,9 @@ ImageTextSection.propTypes = {
   img: PropTypes.string.isRequired,
   imgAlt: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  writtenContent: PropTypes.node,
   imgPosition: PropTypes.string,
   isMatte: PropTypes.bool,
+  variant: PropTypes.string,
 };

@@ -1,0 +1,45 @@
+@use '../../styles/variables.scss' as *;
+
+.bio {
+  display: flex;
+  gap: $space-lg;
+  .bio-container {
+    margin: $space-lg 0;
+
+    .coach-info {
+      display: flex;
+      flex-direction: column;
+      //   gap: $space-md;
+      align-items: flex-start;
+      //   justify-content: flex-start;
+      margin-bottom: $space-md;
+      .coach-name {
+        text-align: left;
+        padding: 0;
+        font-family: $font-oswald;
+        font-weight: $font-weight-semi-bold;
+      }
+      .coach-belt {
+        width: 100%;
+        height: 2px;
+        background-color: $red;
+        margin-bottom: $space-md;
+      }
+    }
+    ul {
+      margin-bottom: $space-sm;
+      li::marker {
+        color: $red;
+      }
+    }
+    p {
+      margin-top: $space-sm !important;
+    }
+  }
+  @include largeBreakpoint {
+    padding: 0;
+    .bio-container {
+      margin: 0;
+    }
+  }
+}

@@ -49,6 +49,7 @@
   }
 
   @include xLargeBreakpoint {
+    transform: translateY(0);
     .home-container {
       max-width: $max-content-width;
     }

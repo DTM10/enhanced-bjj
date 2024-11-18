@@ -6,17 +6,44 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 $mobile-padding;
+  // padding: 0 $mobile-padding;
   .team-container {
     width: 100%;
+    padding-top: $space-lg;
+    .team-title {
+      padding: 0 $mobile-padding;
+      margin-bottom: $space-md;
+      text-align: center;
+    }
   }
   @include smallBreakpoint {
+    padding: 0;
+    .team-container {
+      .team-title {
+        padding: 0 $tablet-padding;
+        text-align: center;
+      }
+    }
   }
   @include largeBreakpoint {
+    padding: 0;
+    .team-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: $space-lg;
+      .team-title {
+        width: 100%;
+        padding: 0 $desktop-padding;
+        text-align: left;
+      }
+    }
   }
   @include xLargeBreakpoint {
     .team-container {
-      max-width: $max-content-width;
+      max-width: calc($max-content-width + 2 * #{$desktop-padding});
     }
   }
 }

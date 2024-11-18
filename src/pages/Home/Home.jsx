@@ -41,7 +41,6 @@ export default function Home() {
           title="Enhance your BJJ skills in Gi & No Gi Classes"
           images={[
             carouselImg1,
-
             carouselImg2,
             carouselImg3,
             carouselImg4,

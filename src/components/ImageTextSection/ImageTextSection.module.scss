@@ -5,19 +5,28 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  &.matte {
-    background-color: $matte-black;
+  &.team {
+    .img-text-session-container {
+      .section-title {
+        display: none;
+      }
+    }
   }
   .img-text-session-container {
     width: 100%;
     padding-left: $mobile-padding;
     padding-right: $mobile-padding;
     .content-container {
-      img {
+      .img-container {
         width: 100%;
+        img {
+          width: 100%;
+        }
       }
-      p {
-        margin-top: $space-sm;
+      .text-container {
+        p {
+          margin-top: $space-sm;
+        }
       }
     }
   }
@@ -30,35 +39,58 @@
   }
   @include largeBreakpoint {
     padding: 0;
-
     .img-text-session-container {
       padding-left: $desktop-padding;
       padding-right: $desktop-padding;
-      h2 {
+      .section-title {
         text-align: left;
       }
       .content-container {
         display: grid;
         grid-template-columns: 3fr 2fr;
         gap: $space-lg;
-        img {
+        .text-container {
+          p {
+            margin-top: auto;
+            margin-bottom: auto;
+          }
         }
-        p {
-          margin-top: auto;
-          margin-bottom: auto;
+        .img-container {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 100%;
+          }
         }
       }
       &.img-right {
-        h2 {
+        .section-title {
           text-align: right;
         }
         .content-container {
           grid-template-columns: 2fr 3fr;
-          img {
+
+          .img-container {
             order: 2;
           }
-          p {
-            order: 1;
+          .text-container {
+            p {
+              order: 1;
+            }
+          }
+        }
+      }
+    }
+    &.team {
+      .img-text-session-container {
+        .content-container {
+          grid-template-columns: 1fr 1fr;
+        }
+        &.img-right {
+          .content-container {
+            grid-template-columns: 1fr 1fr;
           }
         }
       }

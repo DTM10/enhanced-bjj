@@ -65,9 +65,9 @@ export default function Header() {
             <Link className={styles['link']} to="/">
               Home
             </Link>
-            {/* <Link className={styles['link']} to="/team">
+            <Link className={styles['link']} to="/team">
               Meet Our Team
-            </Link> */}
+            </Link>
             <Link className={styles['link']} to="/contact-us">
               Contact Us
             </Link>

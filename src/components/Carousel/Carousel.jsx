@@ -2,7 +2,7 @@ import styles from './Carousel.module.scss';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-export default function Carousel({ images }) {
+export default function Carousel({ images, carouselContent }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const setNewIndex = () => {
@@ -21,14 +21,24 @@ export default function Carousel({ images }) {
   return (
     <div className={styles['carousel']}>
       <div className={styles['carousel-container']}>
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt="carousel image"
-            className={index === currentIndex ? styles['active'] : ''}
-          />
-        ))}
+        {images
+          ? images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt="carousel image"
+                className={index === currentIndex ? styles['active'] : ''}
+              />
+            ))
+          : carouselContent.map((component, index) => (
+              <div
+                key={index}
+                alt="carousel image"
+                className={index === currentIndex ? styles['active'] : ''}
+              >
+                {component}
+              </div>
+            ))}
         {/* <img src={images[currentIndex]} alt="team image" /> */}
       </div>
     </div>
@@ -36,5 +46,6 @@ export default function Carousel({ images }) {
 }
 
 Carousel.propTypes = {
-  images: PropTypes.array.isRequired,
+  images: PropTypes.array,
+  carouselContent: PropTypes.array,
 };

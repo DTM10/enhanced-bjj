@@ -1,0 +1,27 @@
+@use '../../styles/variables.scss' as *;
+
+.belt {
+  height: 10px;
+  width: 100px;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  border-radius: $border-radius-sm;
+  .belt-stripe {
+    border: 0.5px solid $white-10;
+    background-color: $black;
+    border-radius: 0 $border-radius-sm $border-radius-sm 0;
+  }
+  &.black {
+    background-color: $black;
+    border: 0.5px solid $white-10;
+    .belt-stripe {
+      background-color: $red;
+    }
+  }
+  &.brown {
+    background-color: $brown;
+  }
+  &.purple {
+    background-color: $purple;
+  }
+}
