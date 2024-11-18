@@ -120,8 +120,14 @@
   animation: 1s rotateGradient linear infinite;
   overflow-y: hidden;
   border-radius: $border-radius-md;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
   .modal-content-container {
+    width: 306px;
+    height: 216px;
     background: $background-gradient;
     border-radius: $border-radius-md;
     display: flex;
@@ -146,6 +152,8 @@
     width: 600px;
     height: 300px;
     .modal-content-container {
+      width: 596px;
+      height: 296px;
       .modal-logo {
         width: 100px;
         height: auto;
