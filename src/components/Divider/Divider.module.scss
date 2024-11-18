@@ -3,17 +3,12 @@
 .divider-left {
   height: 0.5px;
   background: $gradient-red-black-45;
-  &.team {
-    margin: $space-sm 0;
-    z-index: 300;
-  }
+  width: 100%;
 }
 .divider-right {
   height: 0.5px;
   background: $gradient-black-red-45;
-  &.team {
-    margin: $space-sm 0;
-  }
+  width: 100%;
 }
 
 // @keyframes gradientGlow {

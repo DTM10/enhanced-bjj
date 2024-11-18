@@ -194,10 +194,12 @@ export default function Team() {
               imgPosition={index % 2 === 0 || index === 0 ? '' : 'right'}
               variant="team"
             />
-            <Divider
-              side={index % 2 === 0 || index === 0 ? 'left' : 'right'}
-              variant="team"
-            />
+            {index !== team.length - 1 && (
+              <Divider
+                side={index % 2 === 0 || index === 0 ? 'right' : 'left'}
+                variant="team"
+              />
+            )}
           </>
         ))}
       </div>
