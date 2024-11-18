@@ -1,8 +1,8 @@
 @use '../../styles/variables.scss' as *;
 
 .belt {
-  height: 10px;
-  width: 100px;
+  height: 5px;
+  width: 50px;
   display: grid;
   grid-template-columns: 7fr 3fr;
   border-radius: $border-radius-sm;
@@ -23,5 +23,9 @@
   }
   &.purple {
     background-color: $purple;
+  }
+  @include mediumBreakpoint {
+    height: 10px;
+    width: 100px;
   }
 }

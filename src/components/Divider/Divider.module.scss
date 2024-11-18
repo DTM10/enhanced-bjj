@@ -1,14 +1,31 @@
 @use '../../styles/variables.scss' as *;
 
 .divider-left {
-  height: 0.5px;
   background: $gradient-red-black-45;
-  width: 100%;
 }
 .divider-right {
-  height: 0.5px;
   background: $gradient-black-red-45;
+}
+.divider-left,
+.divider-right {
+  height: 0.5px;
   width: 100%;
+  &.team {
+    z-index: 300;
+    margin: $space-md 0;
+  }
+  @include smallBreakpoint {
+    padding: 0;
+    &.team {
+      margin: $space-lg 0;
+    }
+  }
+  @include largeBreakpoint {
+    padding: 0;
+    &.team {
+      margin: $space-xl 0;
+    }
+  }
 }
 
 // @keyframes gradientGlow {
