@@ -1,0 +1,72 @@
+@use '../../styles/variables.scss' as *;
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  .about-us-container {
+    width: 100%;
+    margin: $space-lg 0;
+    h1,
+    .banner {
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
+    }
+    .banner {
+      margin: $space-lg 0 0;
+      img {
+        width: 100%;
+      }
+      p {
+        margin-top: $space-sm;
+      }
+    }
+  }
+  @include smallBreakpoint {
+    padding: 0;
+    .about-us-container {
+      h1,
+      .banner {
+        padding-left: $tablet-padding;
+        padding-right: $tablet-padding;
+      }
+      .banner {
+        margin: $space-xl 0 0;
+        p {
+          margin-top: $space-md;
+        }
+      }
+    }
+  }
+  @include largeBreakpoint {
+    padding: 0;
+    .about-us-container {
+      max-width: calc(#{$max-content-width} + #{$desktop-padding} * 2);
+      h1,
+      .banner {
+        padding-left: $desktop-padding;
+        padding-right: $desktop-padding;
+      }
+      .banner {
+        margin: $space-xxl 0 0;
+        p {
+          margin-top: $space-lg;
+        }
+      }
+    }
+  }
+}
+
+.written-content {
+  p {
+    margin-top: $space-sm;
+  }
+  @include smallBreakpoint {
+    padding: 0;
+  }
+  @include largeBreakpoint {
+    padding: 0;
+  }
+}

@@ -86,11 +86,11 @@
     &.team {
       .img-text-session-container {
         .content-container {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 2fr 3fr;
         }
         &.img-right {
           .content-container {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 3fr 2fr;
           }
         }
       }

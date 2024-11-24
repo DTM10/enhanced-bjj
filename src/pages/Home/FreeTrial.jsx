@@ -21,9 +21,24 @@ export default function FreeTrial() {
       </div>
     </div>
   );
+  const handleAppleClick = () => {
+    console.log('Apple clicked');
+  };
+  const handleAndroidClick = () => {
+    console.log('Android clicked');
+  };
+
   const buttonsContent = [
-    <AppleBtnContent key={'apple'} />,
-    <AndroidBtnContent key={'android'} />,
+    {
+      btn: <AppleBtnContent key={'apple'} />,
+      key: 'apple-btn',
+      action: handleAppleClick,
+    },
+    {
+      btn: <AndroidBtnContent key={'android'} />,
+      key: 'android-btn',
+      action: handleAndroidClick,
+    },
   ];
   return (
     <section className={styles['free-trial']}>
@@ -36,8 +51,10 @@ export default function FreeTrial() {
         </div>
         <div className={styles['app-btns-container']}>
           {/* TODO: Add app buttons */}
-          {buttonsContent.map((btn) => (
-            <OutlinedButton key={btn.key}>{btn}</OutlinedButton>
+          {buttonsContent.map((btnObj) => (
+            <OutlinedButton key={btnObj.key} onClick={btnObj.action}>
+              {btnObj.btn}
+            </OutlinedButton>
           ))}
         </div>
       </div>

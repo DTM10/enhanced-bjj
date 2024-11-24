@@ -11,6 +11,12 @@ export default function Header() {
   const togglerRef = useRef();
   const { pathname } = useLocation();
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const links = [
+    { name: 'Home', link: '/' },
+    { name: 'Meet Our Team', link: '/team' },
+    { name: 'About Us', link: '/about-us' },
+    { name: 'Contact Us', link: '/contact-us' },
+  ];
 
   // Use the custom hook to handle outside click
   useOutsideClick(modalRef, (event) => {
@@ -62,15 +68,11 @@ export default function Header() {
           ref={modalRef}
         >
           <div className={styles['links']}>
-            <Link className={styles['link']} to="/">
-              Home
-            </Link>
-            <Link className={styles['link']} to="/team">
-              Meet Our Team
-            </Link>
-            <Link className={styles['link']} to="/contact-us">
-              Contact Us
-            </Link>
+            {links.map((link) => (
+              <Link key={link.name} to={link.link} className={styles['link']}>
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       </nav>
