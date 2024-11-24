@@ -2,7 +2,15 @@ import { useEffect } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import PropTypes from 'prop-types';
+import enhancedMarker from '../../assets/images/enhanced-marker.png';
 
+// Create a custom icon
+const customIcon = L.icon({
+  iconUrl: enhancedMarker, // Path to your logo
+  iconSize: [40, 55], // Size of the icon [width, height]
+  iconAnchor: [20, 40], // Anchor point (center bottom of the icon)
+  popupAnchor: [0, -40], // Point where the popup opens
+});
 export default function Map({ latitude, longitude }) {
   useEffect(() => {
     // Initialize the map
@@ -20,7 +28,7 @@ export default function Map({ latitude, longitude }) {
     }).addTo(map);
 
     // Add a marker at the specified location
-    L.marker([latitude, longitude]).addTo(map);
+    L.marker([latitude, longitude], { icon: customIcon }).addTo(map);
 
     // Custom Zoom In button
     const zoomInButton = L.control({ position: 'topleft' });

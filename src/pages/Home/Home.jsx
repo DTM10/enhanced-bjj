@@ -19,10 +19,22 @@ import kidsImg6 from '../../assets/images/kids6.webp';
 import kidsImg7 from '../../assets/images/kids7.webp';
 import FreeTrial from './FreeTrial';
 import Divider from '../../components/Divider/Divider';
+import { Helmet } from 'react-helmet';
 
 export default function Home() {
   return (
     <div className={styles['home']}>
+      <Helmet>
+        <title>Enhanced BJJ | Jiu-Jitsu School in London, Ontario</title>
+        <meta
+          name="description"
+          content="Learn Brazilian Jiu-Jitsu at Enhanced BJJ, the top-rated BJJ gym in London, Ontario. Classes for adults, kids, and women-only sessions."
+        />
+        <meta
+          name="keywords"
+          content="brazilian jiu-jitsu, london, ontario, bjj, jiu-jitsu, women-only, enhanced bjj, scholl, near me, jiujitsu, jiu, ju, martial, arts, no-gi, gi, submission, self-defence, academy"
+        />
+      </Helmet>
       <div className={styles['home-container']}>
         <section className={styles['banner']}>
           <img src={teamBanner} alt="grading event" />
