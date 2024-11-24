@@ -1,7 +1,6 @@
 @use '../../styles/variables.scss' as *;
 
 .footer {
-  // background-color: $black;
   background: $header-gradient;
   height: $mobile-footer-height;
   color: $white;
@@ -15,6 +14,35 @@
     align-items: center;
     height: 100%;
     padding: $space-sm;
+    .social {
+      display: flex;
+      gap: $space-lg;
+      margin: $space-sm 0;
+      a {
+        color: $white; // Default color
+        transition: color 0.3s ease; // Smooth transition for hover effect
+        font-size: $font-size-base;
+        a:hover {
+          transform: scale(1.1); // Slightly enlarge the icon
+        }
+        &.instagram {
+          &:hover {
+            color: #e4405f; // Instagram's pinkish-purple
+          }
+        }
+        &.facebook {
+          &:hover {
+            color: #1877f2; // Facebook's blue
+          }
+        }
+
+        &.email {
+          &:hover {
+            color: #007aff; // Gmail red (or a custom email color)
+          }
+        }
+      }
+    }
     p {
       font-size: 10px;
     }

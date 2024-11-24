@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from '../../components/Modal/Modal';
 import logo from '../../assets/logo.webp';
+import { FaPaperPlane } from 'react-icons/fa';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -14,7 +15,14 @@ export default function Contact() {
   const form = useRef();
 
   const ButtonContent = () => {
-    return <p className={styles['button-content']}>Send</p>;
+    return (
+      <p className={styles['button-content']}>
+        <span>
+          <FaPaperPlane />
+        </span>
+        Send
+      </p>
+    );
   };
 
   useEffect(() => {

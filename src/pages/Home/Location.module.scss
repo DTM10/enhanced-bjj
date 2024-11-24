@@ -8,6 +8,7 @@
       .address {
         width: auto;
         a {
+          color: $white;
           text-decoration: none;
           // display: inline-flex;
           display: flex;
@@ -18,8 +19,8 @@
           }
           &:hover {
             span {
-              // border-bottom: 1px dashed $red;
               text-decoration: underline $red-50;
+              font-weight: $font-weight-semi-bold;
             }
           }
         }

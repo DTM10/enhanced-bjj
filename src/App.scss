@@ -5,6 +5,7 @@
   background: $background-gradient;
   // linear-gradient(to right, $background-black, $red);
   font-family: $font;
+  color: $white;
   h1 {
     font-size: $font-size-h2;
     padding-bottom: $space-sm;
@@ -88,7 +89,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: $font;
-  color: $white;
+  // color: $white;
 }
 button.custom-zoom-button,
 button.custom-zoom-button {

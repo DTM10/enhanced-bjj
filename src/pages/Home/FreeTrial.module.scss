@@ -102,6 +102,18 @@
   border-radius: $border-radius-md;
   padding: $space-xs;
   width: 300px;
+  color: $white;
+  transition: color 0.3 ease;
+  &:hover {
+    .app-btn-text {
+      span {
+        font-weight: $font-weight-normal;
+      }
+      .btn-type {
+        font-weight: $font-weight-semi-bold;
+      }
+    }
+  }
   .app-btn-text {
     display: flex;
     flex-direction: column;

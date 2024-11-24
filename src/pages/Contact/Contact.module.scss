@@ -100,14 +100,35 @@
 
 .button-content {
   width: 100%;
-  padding: $space-md $space-xl;
+  padding: $space-sm $space-lg;
   background-color: $matte-black;
   border-radius: $border-radius-md;
-  font-weight: $font-weight-semi-bold;
+  font-weight: $font-weight-normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-medium;
+  gap: $space-sm;
   cursor: pointer;
+  // color: $white-80;
+  color: $white;
+  transition: color 0.3 ease;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-size-medium;
+  }
+  &:hover {
+    font-weight: $font-weight-semi-bold;
+  }
   @include largeBreakpoint {
-    padding: $space-md $space-xl;
+    padding: $space-sm $space-xl;
     font-size: $font-size-large;
+    gap: $space-md;
+    span {
+      font-size: $font-size-h2;
+    }
   }
 }
 
