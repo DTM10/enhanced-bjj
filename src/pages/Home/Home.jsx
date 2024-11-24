@@ -3,18 +3,18 @@ import teamBanner from '../../assets/images/banner.webp';
 import CarouselAndTextSection from '../../components/CarouselAndTextSection/CarouselAndTextSection';
 import ScheduleSection from './ScheduleSection';
 import Location from './Location';
-import ImageTextSection from '../../components/ImageTextSection/ImageTextSection';
-import womenImg from '../../assets/images/women1.webp';
+// import ImageTextSection from '../../components/ImageTextSection/ImageTextSection';
+import womenImg3 from '../../assets/images/woman-3.webp';
+import womenImg4 from '../../assets/images/woman-4.webp';
+import womenImg8 from '../../assets/images/woman-8.webp';
+import womenImg9 from '../../assets/images/woman-9.webp';
 import carouselImg1 from '../../assets/images/carousel1.webp';
 import carouselImg2 from '../../assets/images/carousel2.webp';
 import carouselImg3 from '../../assets/images/carousel3.webp';
 import carouselImg4 from '../../assets/images/carousel4.webp';
 import carouselImg5 from '../../assets/images/carousel5.webp';
 import kidsImg1 from '../../assets/images/kids1.webp';
-// import kidsImg2 from '../../assets/images/kids2.webp';
-// import kidsImg3 from '../../assets/images/kids3.webp';
-// import kidsImg4 from '../../assets/images/kids4.webp';
-// import kidsImg5 from '../../assets/images/kids5.webp';
+import kidsImg3 from '../../assets/images/kids3.webp';
 import kidsImg6 from '../../assets/images/kids6.webp';
 import kidsImg7 from '../../assets/images/kids7.webp';
 import FreeTrial from './FreeTrial';
@@ -51,19 +51,18 @@ export default function Home() {
         />
         <Divider side="right" />
 
-        <ImageTextSection
-          img={womenImg}
-          imgAlt="Women's class"
+        <CarouselAndTextSection
           title="Empowering Women on the Mats"
+          images={[womenImg3, womenImg4, womenImg8, womenImg9]}
           text="Discover the perfect space to train, connect, and grow in our Women’s Only Class. Designed exclusively for women of all skill levels, this class offers a supportive and inclusive environment to learn Brazilian Jiu-Jitsu techniques while building confidence, strength, and camaraderie."
-          // imgPosition="right"
         />
+
         <Divider />
 
         <CarouselAndTextSection
           title="Building Confidence and Discipline in Our Kids"
           // images={[kidsImg2, kidsImg3, kidsImg4, kidsImg5]}
-          images={[kidsImg1, kidsImg6, kidsImg7]}
+          images={[kidsImg1, kidsImg6, kidsImg3, kidsImg7]}
           text="Our Kids Program is focused on empowering young champions. Through carefully designed classes, kids learn discipline, respect, and self-confidence while having fun. Our experienced instructors ensure a safe and supportive environment for all participants."
           carrouselPosition="right"
         />
