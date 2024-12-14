@@ -35,6 +35,46 @@
         }
       }
     }
+    // TODO: Remove from here
+    .contact-container {
+      margin-top: $space-lg;
+      .contact {
+        text-align: center;
+        font-size: $font-size-base;
+      }
+      .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $space-lg;
+        margin: $space-sm 0;
+        a {
+          color: $white; // Default color
+          transition: color 0.3s ease; // Smooth transition for hover effect
+          font-size: $font-size-base;
+          a:hover {
+            transform: scale(1.1); // Slightly enlarge the icon
+          }
+          &.instagram {
+            &:hover {
+              color: #e4405f; // Instagram's pinkish-purple
+            }
+          }
+          &.facebook {
+            &:hover {
+              color: #1877f2; // Facebook's blue
+            }
+          }
+
+          &.email {
+            &:hover {
+              color: #007aff; // Gmail red (or a custom email color)
+            }
+          }
+        }
+      }
+    }
+    // To here
     .app-btns-container {
       width: 100%;
       margin-top: $space-lg;
@@ -81,6 +121,24 @@
           }
         }
       }
+      // TODO: Remove from here
+      .contact-container {
+        display: flex;
+        flex-direction: column;
+        // gap: $space-lg;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .contact {
+          text-align: left;
+          font-size: $font-size-large;
+        }
+        .social {
+          a {
+            font-size: $font-size-large;
+          }
+        }
+      }
+      // To here
       .app-btns-container {
         justify-content: flex-start;
         align-items: center;

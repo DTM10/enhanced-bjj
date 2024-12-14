@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import Modal from '../../components/Modal/Modal';
 import logo from '../../assets/logo.webp';
 import { FaPaperPlane } from 'react-icons/fa';
+// import { Helmet } from 'react-helmet';
 
 export default function Contact() {
   const [name, setName] = useState('');

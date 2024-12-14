@@ -9,14 +9,20 @@ export default function Footer() {
           <a
             href="https://www.instagram.com/enhancedbjj"
             className={styles.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow us on Instagram"
           >
             <FaInstagram />
           </a>
-          <a href="mailto:example@example.com" className={styles.email}>
+          <a href="mailto:contact@enhancedbjj.com" className={styles.email}>
             <FaEnvelope />
           </a>
           <a
             href="https://www.facebook.com/people/Enhanced-BJJ/100089549310457/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow us on Facebook"
             className={styles.facebook}
           >
             <FaFacebook />

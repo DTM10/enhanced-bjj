@@ -25,15 +25,7 @@ export default function Home() {
   return (
     <div className={styles['home']}>
       <Helmet>
-        <title>Enhanced BJJ | Jiu-Jitsu School in London, Ontario</title>
-        <meta
-          name="description"
-          content="Learn Brazilian Jiu-Jitsu at Enhanced BJJ, the top-rated BJJ gym in London, Ontario. Classes for adults, kids, and women-only sessions."
-        />
-        <meta
-          name="keywords"
-          content="brazilian jiu-jitsu, london, ontario, bjj, jiu-jitsu, women-only, enhanced bjj, scholl, near me, jiujitsu, jiu, ju, martial, arts, no-gi, gi, submission, self-defence, academy"
-        />
+        <link rel="canonical" href="https://enhancedbjj.com/" />
       </Helmet>
       <div className={styles['home-container']}>
         <section className={styles['banner']}>
