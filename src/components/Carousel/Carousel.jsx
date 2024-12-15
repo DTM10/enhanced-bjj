@@ -26,14 +26,14 @@ export default function Carousel({ images, carouselContent }) {
               <img
                 key={index}
                 src={image}
-                alt="carousel image"
+                alt="jiujitsu carousel image"
                 className={index === currentIndex ? styles['active'] : ''}
               />
             ))
           : carouselContent.map((component, index) => (
               <div
                 key={index}
-                alt="carousel image"
+                alt="jiujitsu carousel image"
                 className={index === currentIndex ? styles['active'] : ''}
               >
                 {component}

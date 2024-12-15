@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Test Rule: Redirect 'test' to the homepage (debugging purpose)
+
+RewriteRule ^test$ / [L]
+
+RewriteBase / RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]

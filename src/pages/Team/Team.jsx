@@ -1,4 +1,5 @@
 import styles from './Team.module.scss';
+import { Helmet } from 'react-helmet';
 import ImageTextSection from '../../components/ImageTextSection/ImageTextSection';
 import Bio from './Bio';
 import Divider from '../../components/Divider/Divider';
@@ -144,6 +145,31 @@ export default function Team() {
   ];
   return (
     <div className={styles.team}>
+      <Helmet>
+        <title>Meet Our Team | Enhanced BJJ</title>
+        <meta
+          name="description"
+          content="Meet the Enhanced BJJ team, a group of skilled Brazilian Jiu-Jitsu black belts and instructors dedicated to guiding students of all levels. Learn more about our experienced and passionate coaches."
+        />
+        <meta
+          name="keywords"
+          content="Enhanced BJJ team, Brazilian Jiu-Jitsu instructors, BJJ black belts, Jiu-Jitsu school in London Ontario, BJJ coaches"
+        />
+        <link rel="canonical" href="https://enhancedbjj.com/team" />
+        <meta property="og:title" content="Meet Our Team | Enhanced BJJ" />
+        <meta
+          property="og:description"
+          content="Discover the Enhanced BJJ team of dedicated Brazilian Jiu-Jitsu instructors. Learn about their experience and passion for guiding students."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://enhancedbjj.com/team" />
+        <meta
+          property="og:image"
+          content="https://enhancedbjj.com/images/team-banner.webp"
+        />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:site_name" content="Enhanced BJJ" />
+      </Helmet>
       <div className={styles['team-container']}>
         <h1 className={styles['team-title']}>Enhanced BJJ Team</h1>
         {team.map((member, index) => (

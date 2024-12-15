@@ -2,6 +2,7 @@ import styles from './AboutUs.module.scss';
 import ImageTextSection from '../../components/ImageTextSection/ImageTextSection';
 import teamImage from '../../assets/images/team.webp';
 import founders from '../../assets/images/about-us.webp';
+import { Helmet } from 'react-helmet';
 
 export default function AboutUs() {
   //   const writtenContent = (
@@ -25,6 +26,41 @@ export default function AboutUs() {
   //   );
   return (
     <section className={styles['about-us']}>
+      <Helmet>
+        <title>About Us | Enhanced BJJ</title>
+        <meta
+          name="description"
+          content="Learn about Enhanced BJJ, founded in 2023 by Hawk IV and Max Doucet, dedicated to teaching Brazilian Jiu-Jitsu in London, Ontario. Meet our experienced instructors and discover our mission to enhance your Jiu-Jitsu journey."
+        />
+        <meta
+          name="keywords"
+          content="Enhanced BJJ, Brazilian Jiu-Jitsu London Ontario, BJJ founders, Northern Vanguard Association, Jiu-Jitsu training, BJJ instructors, Hawk IV, Max Doucet"
+        />
+        <link rel="canonical" href="https://enhancedbjj.com/about-us" />
+        <meta property="og:title" content="About Us | Enhanced BJJ" />
+        <meta
+          property="og:description"
+          content="Discover the story of Enhanced BJJ, a leading Brazilian Jiu-Jitsu school in London, Ontario. Learn about our founders, instructors, and mission."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://enhancedbjj.com/about-us" />
+        <meta
+          property="og:image"
+          content="https://enhancedbjj.com/images/about-us.webp"
+        />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:site_name" content="Enhanced BJJ" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us | Enhanced BJJ" />
+        <meta
+          name="twitter:description"
+          content="Learn about Enhanced BJJ, its founders, and its mission to enhance your Brazilian Jiu-Jitsu journey in London, Ontario."
+        />
+        <meta
+          name="twitter:image"
+          content="https://enhancedbjj.com/images/about-us.webp"
+        />
+      </Helmet>
       <div className={styles['about-us-container']}>
         <h1>About Us</h1>
 

@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import Modal from '../../components/Modal/Modal';
 import logo from '../../assets/logo.webp';
 import { FaPaperPlane } from 'react-icons/fa';
-// import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -76,6 +76,31 @@ export default function Contact() {
 
   return (
     <section className={styles['contact']}>
+      <Helmet>
+        <title>Contact Us | Enhanced BJJ</title>
+        <meta
+          name="description"
+          content="Contact Enhanced BJJ for any questions about our classes, schedule, or gym location. We're here to help you start your Brazilian Jiu-Jitsu journey in London, Ontario."
+        />
+        <meta
+          name="keywords"
+          content="Enhanced BJJ contact, BJJ gym London Ontario, Brazilian Jiu-Jitsu questions, class schedule, gym location"
+        />
+        <link rel="canonical" href="https://enhancedbjj.com/contact-us" />
+        <meta property="og:title" content="Contact Us | Enhanced BJJ" />
+        <meta
+          property="og:description"
+          content="Get in touch with Enhanced BJJ. Learn more about our Brazilian Jiu-Jitsu classes, gym location, and schedule in London, Ontario."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://enhancedbjj.com/contact-us" />
+        <meta
+          property="og:image"
+          content="https://enhancedbjj.com/images/contact-banner.webp"
+        />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:site_name" content="Enhanced BJJ" />
+      </Helmet>
       {showModal && (
         <Modal>
           <ModalContent />
