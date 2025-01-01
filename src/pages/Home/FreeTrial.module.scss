@@ -15,6 +15,7 @@
     justify-content: center;
     .text-container {
       //   margin: $space-xl 0 0;
+      // width: 100%;
       .not-member {
         width: 100%;
         font-size: $font-size-small;
@@ -32,6 +33,25 @@
           color: $red;
           font-size: $font-size-large;
           // border-bottom: 1px dashed $red;
+        }
+      }
+      .tempLink {
+        display: flex;
+        text-align: center;
+        margin-top: $space-lg;
+        font-size: $font-size-base;
+        font-style: normal;
+        font-weight: $font-weight-semi-bold;
+        color: $white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        gap: $space-xs;
+        a {
+          color: $white;
+        text-decoration: none;
+          &:hover {
+            color: $red;
+          }
         }
       }
     }
@@ -119,6 +139,9 @@
           strong {
             border-bottom: 1px dashed $red;
           }
+        }
+        .tempLink {
+          text-align: left
         }
       }
       // TODO: Remove from here

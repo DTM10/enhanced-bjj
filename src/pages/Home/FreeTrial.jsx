@@ -46,8 +46,9 @@ export default function FreeTrial() {
       <div className={styles['free-trial-container']}>
         <div className={styles['text-container']}>
           <p className={styles['not-member']}>Not a member yet?</p>
+          <span className={styles['tempLink']}><a href="https://www.wellnessliving.com/signup/enhancedbjj">Click Here</a>to</span>
           <p className={styles['free-trial-text']}>
-            Get <strong>3 class free trial</strong>
+            Get <strong>3 class free trial</strong> 
             {/* right in the app! */}
           </p>
         </div>
