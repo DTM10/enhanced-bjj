@@ -1,21 +1,22 @@
-import styles from './Team.module.scss';
-import { Helmet } from 'react-helmet';
-import ImageTextSection from '../../components/ImageTextSection/ImageTextSection';
-import Bio from './Bio';
-import Divider from '../../components/Divider/Divider';
-import pDiego from '../../assets/images/professor-diego.webp';
-import pMax from '../../assets/images/professor-max.webp';
-import pHawk from '../../assets/images/professor-hawk.webp';
-import pMatt from '../../assets/images/professor-matt.webp';
-import pBarry from '../../assets/images/professor-barry.webp';
+import styles from "./Team.module.scss";
+import { Helmet } from "react-helmet";
+import ImageTextSection from "../../components/ImageTextSection/ImageTextSection";
+import Bio from "./Bio";
+import Divider from "../../components/Divider/Divider";
+import pDiego from "../../assets/images/professor-diego.webp";
+import pMax from "../../assets/images/professor-max.webp";
+import pHawk from "../../assets/images/professor-hawk.webp";
+import pMatt from "../../assets/images/pMatt.webp";
+import pBarry from "../../assets/images/professor-barry.webp";
+import pBlair from "../../assets/images/pBlair.webp";
 
 export default function Team() {
   const team = [
     {
       img: pMatt,
-      altImg: 'Professor Matt',
-      name: 'Matt',
-      belt: 'black',
+      altImg: "Professor Matt",
+      name: "Matt",
+      belt: "black",
       bio: (
         <>
           <p>
@@ -34,9 +35,9 @@ export default function Team() {
     },
     {
       img: pDiego,
-      altImg: 'Professor Diego',
-      name: 'Diego',
-      belt: 'black',
+      altImg: "Professor Diego",
+      name: "Diego",
+      belt: "black",
       bio: (
         <>
           <p>
@@ -63,9 +64,9 @@ export default function Team() {
     },
     {
       img: pHawk,
-      altImg: 'Professor Hawk',
-      name: 'Hawk',
-      belt: 'black',
+      altImg: "Professor Hawk",
+      name: "Hawk",
+      belt: "black",
       bio: (
         <>
           <ul>
@@ -98,9 +99,9 @@ export default function Team() {
     },
     {
       img: pBarry,
-      altImg: 'Professor Barry',
-      name: 'Barry',
-      belt: 'black',
+      altImg: "Professor Barry",
+      name: "Barry",
+      belt: "black",
       bio: (
         <>
           <p>
@@ -113,16 +114,16 @@ export default function Team() {
             in jiu-jitsu after being a practitioner for 13 years. He has
             competed in IBJJF, provincial and local tournaments. When not
             training with his friends, Barry likes to spend time with family. He
-            is happy and proud to be part of Enhanced BJJ.{' '}
+            is happy and proud to be part of Enhanced BJJ.{" "}
           </p>
         </>
       ),
     },
     {
       img: pMax,
-      altImg: 'Professor Max',
-      name: 'Max',
-      belt: 'black',
+      altImg: "Professor Max",
+      name: "Max",
+      belt: "black",
       bio: (
         <>
           <ul>
@@ -137,7 +138,27 @@ export default function Team() {
             of Brazilian Jiu Jitsu regularly competing in international
             competitions. With over 10 years of experience, Max brings a wealth
             of knowledge and a commitment to supporting aspiring athletes in
-            achieving their competitive goals.{' '}
+            achieving their competitive goals.{" "}
+          </p>
+        </>
+      ),
+    },
+    {
+      img: pBlair,
+      altImg: "Professor Blair",
+      name: "Blair",
+      belt: "black",
+      bio: (
+        <>
+          <p>
+            Have you ever thought about starting BJJ and thought it too late. It
+            is not. I am Blair Bravender Brazilian jiu-jitsu black belt. I
+            discovered this amazing martial art in my early 30's and now in my
+            mid 40's enjoy it more than ever. Through competition and regular
+            training I have developed a passion for helping others discover and
+            development love for Brazilian jiu-jitsu. I do this by making sure
+            we all understand the fun in fundamentals. Look forward to sharing
+            our BJJ journeys together.
           </p>
         </>
       ),
@@ -170,8 +191,8 @@ export default function Team() {
         <meta property="og:locale" content="en_CA" />
         <meta property="og:site_name" content="Enhanced BJJ" />
       </Helmet>
-      <div className={styles['team-container']}>
-        <h1 className={styles['team-title']}>Enhanced BJJ Team</h1>
+      <div className={styles["team-container"]}>
+        <h1 className={styles["team-title"]}>Enhanced BJJ Team</h1>
         {team.map((member, index) => (
           <>
             <ImageTextSection
@@ -185,12 +206,12 @@ export default function Team() {
                   belt={member.belt}
                 />
               }
-              imgPosition={index % 2 === 0 || index === 0 ? '' : 'right'}
+              imgPosition={index % 2 === 0 || index === 0 ? "" : "right"}
               variant="team"
             />
             {index !== team.length - 1 && (
               <Divider
-                side={index % 2 === 0 || index === 0 ? 'right' : 'left'}
+                side={index % 2 === 0 || index === 0 ? "right" : "left"}
                 variant="team"
               />
             )}
