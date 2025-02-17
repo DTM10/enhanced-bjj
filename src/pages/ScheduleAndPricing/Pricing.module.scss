@@ -1,0 +1,37 @@
+@import "../../styles/variables.scss";
+
+.pricing {
+  h2 {
+    padding: 0 $mobile-padding $space-md;
+  }
+  .pricing-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: $space-lg;
+    .pricing-adults,
+    .pricing-kids {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: $space-md;
+      img {
+        max-width: 380px;
+      }
+    }
+  }
+  @include smallBreakpoint {
+    padding: 0;
+    h2 {
+      padding: 0 $tablet-padding $space-md;
+    }
+  }
+  @include largeBreakpoint {
+    padding: 0;
+    h2 {
+      padding: 0 $desktop-padding $space-lg;
+    }
+  }
+}

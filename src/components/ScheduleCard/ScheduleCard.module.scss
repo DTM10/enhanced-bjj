@@ -1,4 +1,4 @@
-@use '../../styles/variables.scss' as *;
+@use "../../styles/variables.scss" as *;
 
 .schedule-card {
   height: 100%;
@@ -37,5 +37,28 @@
   @include largeBreakpoint {
     padding: 0;
     align-items: flex-start;
+  }
+
+  &.pricing {
+    .schedule-card-container {
+      max-width: none;
+    }
+    @include mediumBreakpoint {
+      padding: 0;
+      .schedule-card-container {
+        padding: $space-md $space-lg;
+        p {
+          font-size: $font-size-large;
+          text-align: left;
+        }
+        ul {
+          list-style: inside;
+          li {
+            font-size: $font-size-base;
+            text-align: left;
+          }
+        }
+      }
+    }
   }
 }

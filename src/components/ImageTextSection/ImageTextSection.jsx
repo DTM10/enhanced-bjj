@@ -1,5 +1,5 @@
-import styles from './ImageTextSection.module.scss';
-import PropTypes from 'prop-types';
+import styles from "./ImageTextSection.module.scss";
+import PropTypes from "prop-types";
 
 export default function ImageTextSection({
   img,
@@ -11,23 +11,23 @@ export default function ImageTextSection({
   variant,
 }) {
   const componentClass = variant
-    ? `${styles['img-text-session']} ${styles[variant]}`
-    : styles['img-text-session'];
+    ? `${styles["img-text-session"]} ${styles[variant]}`
+    : styles["img-text-session"];
 
   const containerClass =
-    imgPosition && imgPosition === 'right'
-      ? `${styles['img-text-session-container']} ${styles['img-right']}`
-      : styles['img-text-session-container'];
+    imgPosition && imgPosition === "right"
+      ? `${styles["img-text-session-container"]} ${styles["img-right"]}`
+      : styles["img-text-session-container"];
   return (
     <section className={componentClass}>
       <div className={containerClass}>
-        <h2 className={styles['section-title']}>{title}</h2>
-        <div className={styles['content-container']}>
-          <div className={styles['img-container']}>
+        {title && <h2 className={styles["section-title"]}>{title}</h2>}
+        <div className={styles["content-container"]}>
+          <div className={styles["img-container"]}>
             <img src={img} alt={imgAlt} />
           </div>
           {text && (
-            <div className={styles['text-container']}>
+            <div className={styles["text-container"]}>
               <p>{text}</p>
             </div>
           )}

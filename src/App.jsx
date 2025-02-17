@@ -1,21 +1,23 @@
-import './App.scss';
+import "./App.scss";
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './components/Layout.jsx';
-import Home from './pages/Home/Home.jsx';
-import Team from './pages/Team/Team.jsx';
-import Contact from './pages/Contact/Contact.jsx';
-import AboutUs from './pages/AboutUs/AboutUs.jsx';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/Layout.jsx";
+import Home from "./pages/Home/Home.jsx";
+import Team from "./pages/Team/Team.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
+import AboutUs from "./pages/AboutUs/AboutUs.jsx";
+import ScheduleAndPricing from "./pages/ScheduleAndPricing/ScheduleAndPricing.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
-      { path: 'team', element: <Team /> },
-      { path: 'about-us', element: <AboutUs /> },
-      { path: 'contact-us', element: <Contact /> },
+      { path: "team", element: <Team /> },
+      { path: "schedule-and-pricing", element: <ScheduleAndPricing /> },
+      { path: "about-us", element: <AboutUs /> },
+      { path: "contact-us", element: <Contact /> },
     ],
   },
 ]);

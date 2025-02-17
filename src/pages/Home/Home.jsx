@@ -1,29 +1,27 @@
-import styles from './Home.module.scss';
-import teamBanner from '../../assets/images/banner.webp';
-import CarouselAndTextSection from '../../components/CarouselAndTextSection/CarouselAndTextSection';
-import ScheduleSection from './ScheduleSection';
-import Location from './Location';
-// import ImageTextSection from '../../components/ImageTextSection/ImageTextSection';
-import womenImg3 from '../../assets/images/woman-3.webp';
-import womenImg4 from '../../assets/images/woman-4.webp';
-import womenImg8 from '../../assets/images/woman-8.webp';
-import womenImg9 from '../../assets/images/woman-9.webp';
-import carouselImg1 from '../../assets/images/carousel1.webp';
-import carouselImg2 from '../../assets/images/carousel2.webp';
-import carouselImg3 from '../../assets/images/carousel3.webp';
-import carouselImg4 from '../../assets/images/carousel4.webp';
-import carouselImg5 from '../../assets/images/carousel5.webp';
-import kidsImg1 from '../../assets/images/kids1.webp';
-import kidsImg3 from '../../assets/images/kids3.webp';
-import kidsImg6 from '../../assets/images/kids6.webp';
-import kidsImg7 from '../../assets/images/kids7.webp';
-import FreeTrial from './FreeTrial';
-import Divider from '../../components/Divider/Divider';
-import { Helmet } from 'react-helmet';
+import styles from "./Home.module.scss";
+import teamBanner from "../../assets/images/banner.webp";
+import CarouselAndTextSection from "../../components/CarouselAndTextSection/CarouselAndTextSection";
+import Location from "./Location";
+import womenImg3 from "../../assets/images/woman-3.webp";
+import womenImg4 from "../../assets/images/woman-4.webp";
+import womenImg8 from "../../assets/images/woman-8.webp";
+import womenImg9 from "../../assets/images/woman-9.webp";
+import carouselImg1 from "../../assets/images/carousel1.webp";
+import carouselImg2 from "../../assets/images/carousel2.webp";
+import carouselImg3 from "../../assets/images/carousel3.webp";
+import carouselImg4 from "../../assets/images/carousel4.webp";
+import carouselImg5 from "../../assets/images/carousel5.webp";
+import kidsImg1 from "../../assets/images/kids1.webp";
+import kidsImg3 from "../../assets/images/kids3.webp";
+import kidsImg6 from "../../assets/images/kids6.webp";
+import kidsImg7 from "../../assets/images/kids7.webp";
+import FreeTrial from "./FreeTrial";
+import Divider from "../../components/Divider/Divider";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   return (
-    <div className={styles['home']}>
+    <div className={styles["home"]}>
       <Helmet>
         {/* Page-specific Title */}
         <title>Enhanced BJJ | Jiu-Jitsu School in London, Ontario</title>
@@ -83,10 +81,10 @@ export default function Home() {
           content="https://enhancedbjj.com/instagram.png"
         />
       </Helmet>
-      <div className={styles['home-container']}>
-        <section className={styles['banner']}>
+      <div className={styles["home-container"]}>
+        <section className={styles["banner"]}>
           <img src={teamBanner} alt="jiujitsu grading event" />
-          <div className={styles['banner-text']}>
+          <div className={styles["banner-text"]}>
             <h1>Brazilian Jiu-Jitsu CHANGES LIVES</h1>
             <p>
               At Enhanced BJJ, we create a fantastic learning environment where
@@ -128,12 +126,12 @@ export default function Home() {
         />
         <Divider side="right" />
 
-        <ScheduleSection />
+        {/* <ScheduleSection /> */}
         <Divider />
 
         <FreeTrial />
         <Divider side="right" />
-        <div className={styles['divider-right']}></div>
+        <div className={styles["divider-right"]}></div>
         <Location />
       </div>
     </div>

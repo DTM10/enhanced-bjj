@@ -52,3 +52,17 @@ export const schedule = [
     ],
   },
 ];
+
+export const adultsPricing = [
+  "Monthly membership - $135 + tax",
+  "3 Month membership - $360 + tax",
+  "6 Month membership - $660 + tax",
+  "12 Month membership - $1,200 + tax",
+];
+
+export const kidsPricing = [
+  "Monthly membership - $120 + tax",
+  "3 Month membership - $330 + tax",
+  "6 Month membership - $600 + tax",
+  "12 Month membership - $1,140 + tax",
+];

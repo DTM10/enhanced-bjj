@@ -4,7 +4,7 @@ import ImageTextSection from "../../components/ImageTextSection/ImageTextSection
 import Bio from "./Bio";
 import Divider from "../../components/Divider/Divider";
 import pDiego from "../../assets/images/professor-diego.webp";
-import pMax from "../../assets/images/professor-max.webp";
+import pMax from "../../assets/images/pMax.webp";
 import pHawk from "../../assets/images/professor-hawk.webp";
 import pMatt from "../../assets/images/pMatt.webp";
 import pBarry from "../../assets/images/professor-barry.webp";

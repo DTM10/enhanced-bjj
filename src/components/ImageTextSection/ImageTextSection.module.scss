@@ -1,4 +1,4 @@
-@use '../../styles/variables.scss' as *;
+@use "../../styles/variables.scss" as *;
 
 .img-text-session {
   display: flex;
@@ -17,6 +17,9 @@
     padding-left: $mobile-padding;
     padding-right: $mobile-padding;
     .content-container {
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
       .img-container {
         width: 100%;
         img {
@@ -30,6 +33,15 @@
       }
     }
   }
+  &.pricing {
+    .img-text-session-container {
+      .img-container {
+        img {
+          border-radius: $border-radius-md;
+        }
+      }
+    }
+  }
   @include smallBreakpoint {
     padding: 0;
     .img-text-session-container {
@@ -37,6 +49,7 @@
       padding-right: $tablet-padding;
     }
   }
+
   @include largeBreakpoint {
     padding: 0;
     .img-text-session-container {
