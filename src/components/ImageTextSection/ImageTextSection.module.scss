@@ -108,5 +108,23 @@
         }
       }
     }
+    &.pricing {
+      .img-text-session-container {
+        .content-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+
+  @include xLargeBreakpoint {
+    &.pricing {
+      padding-left: 0;
+      padding-right: 0;
+      .img-text-session-container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
   }
 }

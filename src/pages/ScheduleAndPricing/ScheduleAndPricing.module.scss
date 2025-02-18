@@ -10,8 +10,6 @@
     display: flex;
     flex-direction: column;
     padding-top: $space-md;
-    // padding-left: $mobile-padding;
-    // padding-right: $mobile-padding;
     gap: $space-lg;
     width: 100%;
     .schedule-section {
@@ -28,8 +26,6 @@
         padding-left: $tablet-padding;
         padding-right: $tablet-padding;
       }
-      // padding-left: $tablet-padding;
-      // padding-right: $tablet-padding;
     }
   }
   @include largeBreakpoint {
@@ -61,6 +57,10 @@
       justify-content: center;
       align-items: flex-start;
       max-width: $max-content-width;
+      .schedule-section {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 }
