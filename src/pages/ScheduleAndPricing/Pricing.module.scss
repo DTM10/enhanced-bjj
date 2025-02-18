@@ -34,10 +34,10 @@
       padding: 0 $desktop-padding $space-lg;
     }
   }
-  //   @include xLargeBreakpoint {
-  //     padding: 0;
-  //     h2 {
-  //       padding: 0 0 $space-lg;
-  //     }
-  //   }
+  @include xLargeBreakpoint {
+    padding: 0;
+    h2 {
+      padding: 0 0 $space-lg;
+    }
+  }
 }
