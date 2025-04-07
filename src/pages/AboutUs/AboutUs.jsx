@@ -1,8 +1,8 @@
-import styles from './AboutUs.module.scss';
-import ImageTextSection from '../../components/ImageTextSection/ImageTextSection';
-import teamImage from '../../assets/images/team.webp';
-import founders from '../../assets/images/about-us.webp';
-import { Helmet } from 'react-helmet';
+import styles from "./AboutUs.module.scss";
+import ImageTextSection from "../../components/ImageTextSection/ImageTextSection";
+import teamImage from "../../assets/images/team.webp";
+import founders from "../../assets/images/about-us.webp";
+import { Helmet } from "react-helmet";
 
 export default function AboutUs() {
   //   const writtenContent = (
@@ -25,7 +25,7 @@ export default function AboutUs() {
   //     </div>
   //   );
   return (
-    <section className={styles['about-us']}>
+    <section className={styles["about-us"]}>
       <Helmet>
         <title>About Us | Enhanced BJJ</title>
         <meta
@@ -61,7 +61,7 @@ export default function AboutUs() {
           content="https://enhancedbjj.com/images/about-us.webp"
         />
       </Helmet>
-      <div className={styles['about-us-container']}>
+      <div className={styles["about-us-container"]}>
         <h1>About Us</h1>
 
         <ImageTextSection
@@ -75,14 +75,14 @@ export default function AboutUs() {
         headed by Professor Jeff Joslin. Professor Jeff Joslin is a black belt
         under Romero “Jacare” Cavalcanti."
         />
-        <div className={styles['banner']}>
+        <div className={styles["banner"]}>
           <img src={teamImage} alt="Enhanced BJJ Professors" />
           <p>
             Enhanced BJJ is also led by Professors Diego Terto Martins, Matt
             Thorburn, and Barry MacDonald. All of our instructors hold a
             lifetime of knowledge in Brazilian Jiu Jitsu and are eager to share
             their knowledge with our members. Together, our mission is to truly
-            enhance every member&aposs Brazilian Jiu Jitsu journey.
+            enhance every member's Brazilian Jiu Jitsu journey.
           </p>
           {/* <p>
             From left to right: Professors Barry, Diego, Hawk, Max, and Matt
