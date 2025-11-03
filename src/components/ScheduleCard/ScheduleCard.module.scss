@@ -42,6 +42,13 @@
   &.pricing {
     .schedule-card-container {
       max-width: none;
+      .legal-text {
+        text-transform: none;
+        font-size: $font-size-small;
+        margin-top: $space-xs;
+        text-align: left;
+        font-weight: $font-weight-normal;
+      }
     }
     @include mediumBreakpoint {
       padding: 0;

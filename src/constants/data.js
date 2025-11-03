@@ -40,14 +40,14 @@ export const schedule = [
     day: "Friday",
     classes: [
       "12:00 PM - BJJ Gi or Nogi Optional Class",
-      "7:00 PM - Beginners No-Gi",
+      "6:00 PM - Beginners No-Gi",
     ],
   },
   {
     day: "Saturday",
     classes: [
       "11:00 AM - Kids Brazilian Jiu-Jitsu",
-      "12:00 PM - Beginners Gi/No-Gi",
+      "12:00 PM - Beginners Gi",
       "1:00 PM - Open Mat Jiu-Jitsu",
     ],
   },

@@ -17,6 +17,7 @@ export default function Pricing() {
               weekday="Adults and Teens (ages 14+)"
               classes={adultsPricing}
               variant="pricing"
+              legalText="* All memberships will autorenew based on the option purchased."
             />
           }
           variant="pricing"
@@ -25,9 +26,10 @@ export default function Pricing() {
           img={kidsImg}
           writtenContent={
             <ScheduleCard
-              weekday="Kids (ages 4-13+)"
+              weekday="Kids (ages 5-13+)"
               classes={kidsPricing}
               variant="pricing"
+              legalText="* All memberships will autorenew based on the option purchased."
             />
           }
           imgPosition="right"

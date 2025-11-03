@@ -22,6 +22,7 @@ export default function ImageTextSection({
     <section className={componentClass}>
       <div className={containerClass}>
         {title && <h2 className={styles["section-title"]}>{title}</h2>}
+
         <div className={styles["content-container"]}>
           <div className={styles["img-container"]}>
             <img src={img} alt={imgAlt} />

@@ -20,7 +20,7 @@ export default function Team() {
       bio: (
         <>
           <p>
-            <strong>1st Degree Black Belt</strong>
+            <strong>2nd Degree Black Belt</strong>
           </p>
           <p>
             Are you looking to enhance your skills in Brazilian Jiu-Jitsu? Look
@@ -41,12 +41,12 @@ export default function Team() {
       bio: (
         <>
           <p>
-            <strong>1st Degree Black Belt - IBJJF Certified Black Belt</strong>
+            <strong>2nd Degree Black Belt - IBJJF Certified Black Belt</strong>
           </p>
           <p>
             Introducing Diego Terto Martins, a highly accomplished martial
             artist with a background in jiu-jitsu and judo. After eight years of
-            judo, he dedicated over twelve years to jiu-jitsu, where he earned
+            judo, he dedicated over thirteen years to jiu-jitsu, where he earned
             the esteemed rank of 1st Degree Black Belt. Diego&apos;s passion for
             martial arts led him to compete in local and national tournaments in
             Brazil. He earned the prestigious silver medal at the World Masters
@@ -71,7 +71,8 @@ export default function Team() {
         <>
           <ul>
             <li>
-              Brazilian Jiu-Jitsu Black Belt 14 Years of Training and Competing
+              1st Degree Brazilian Jiu-Jitsu Black Belt 14 Years of Training and
+              Competing
             </li>
             <li>Certified Personal Trainer Group Fitness Instructor</li>
             <li>Precision Nutrition Level 1 Certification</li>
@@ -153,12 +154,12 @@ export default function Team() {
           <p>
             Have you ever thought about starting BJJ and thought it too late. It
             is not. I am Blair Bravender Brazilian jiu-jitsu black belt. I
-            discovered this amazing martial art in my early 30's and now in my
-            mid 40's enjoy it more than ever. Through competition and regular
-            training I have developed a passion for helping others discover and
-            development love for Brazilian jiu-jitsu. I do this by making sure
-            we all understand the fun in fundamentals. Look forward to sharing
-            our BJJ journeys together.
+            discovered this amazing martial art in my early 30&apos;s and now in
+            my mid 40&apos;s enjoy it more than ever. Through competition and
+            regular training I have developed a passion for helping others
+            discover and development love for Brazilian jiu-jitsu. I do this by
+            making sure we all understand the fun in fundamentals. Look forward
+            to sharing our BJJ journeys together.
           </p>
         </>
       ),
