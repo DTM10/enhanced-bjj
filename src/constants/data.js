@@ -14,7 +14,7 @@ export const schedule = [
       "12:00 PM - BJJ Gi or Nogi Optional Class",
       "5:00 PM - Kids Brazilian Jiu-Jitsu",
       "6:00 PM - Beginners Gi",
-      "7:00 PM - Competition Gi",
+      "7:00 PM - Brazilian Jiu-Jitsu - Gi",
     ],
   },
   {
